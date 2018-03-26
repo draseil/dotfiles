@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# simple screenFetch
+
+echo -e "Hostname.....$(hostname)"
+echo -e "Kernel.......$(uname -sr)"
+echo -e "Packages.....$(pacman -Q | wc -l)"
+echo -e "Uptime.......$(uptime -p | cut -c 4-)"
+echo -e "Memory.......$(free -m | grep Mem | cut -c 29-31)M / $(free -m | grep Mem | cut -c 16-19)M"
+echo -e "DE...........$(xprop -root | grep _DT_RESTORE | cut -c 29-33)"
+echo -e "Keyboard.....$(xkb-switch)"
