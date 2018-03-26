@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# run ptcgo
+
+wine ~/.wine/drive_c/users/luigi/Application\ Data/Pokémon\ Trading\ Card\ Game\ Online/PokemonTradingCardGameOnline/Pokemon\ Trading\ Card\ Game\ Online.exe
+
