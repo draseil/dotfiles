@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# easier way to call notification using lemonbar
+
+lemonbar -g 200x30+$1 -d -B#FF303640 -F#FFDDDDDD -d -f -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1

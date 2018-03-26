@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# z3bra - (c) wtfpl 2014
+# check battery level, and raise a notification if the capacity is
+# under a defined level
+
+#BATC=$(sed 's/%//' /sys/class/power_supply/BAT0/capacity)
+BATC=$(cat /sys/class/power_supply/BAT1/capacity)
+
+while :; do
+#	BATC=$(cat /sys/class/power_supply/BAT0/capacity)
+	echo %{c}Battery level: $BATC%%
+	sleep 1
+done | bar 1710+50
+#-misc-inconsolata-medium-r-normal--12-0-0-0-m-0-iso10646-1
+#-*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*,-misc-fixed-medium-r-normal-ja-13-120-75-75-c-120-iso10646-1
+
