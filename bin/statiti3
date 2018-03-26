@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# simple i3 status info
+
+while true; do
+	window="$(wname $(pfw))"
+	clock="$(date +"%A, %eth %B %Y  %H:%M:%S")"
+	music="$(mpc current -f "%artist% - %album% - %title%")"
+
+	echo "$window | $music | $clock"
+done
