@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while :; do
+	echo %{c}$(date +%F\ %H:%M:%S\ \(%A\));
+	sleep 1;
+done | bar 1710+10
