@@ -124,8 +124,22 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Are you sure you want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindkeys Print exec scrot
-bindkeys Shift+Print exec scrot -s
+# print screen
+bindsym Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/usr/images/screenshots/'
+bindsym Shift+Print exec scrot -s
+
+# volume controls
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute && notify $(volume)
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute && notify $(volume)
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+# brightness controls
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+
+# switch keyboard layout
+bindsym $mod+x exec setxkbmap ch
+bindsym $mod+b exec setxkbmap dvorak
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
