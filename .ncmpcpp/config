@@ -1,8 +1,8 @@
 # mpd_host	= "85.5.16.85"
 mpd_host	= "localhost"
 mpd_port	= "6600"
-mpd_music_dir	= "/home/luigi/usr/music"
-lyrics_directory= "/home/luigi/.ncmpcpp/lyrics/"
+mpd_music_dir	= "~/usr/music"
+lyrics_directory= "~/.ncmpcpp/lyrics/"
 
 main_window_color = white
 enable_window_title = no
