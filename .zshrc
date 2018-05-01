@@ -10,7 +10,7 @@ export XDG_LOG_HOME=$HOME/.local/share/log/
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' max-errors 3
-zstyle :compinstall filename '/home/luigi/.zshrc'
+zstyle :compinstall filename $HOME'.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -32,6 +32,8 @@ PS1='└──── $ '
 alias print='lp -d EPFL-Colour -o sides=one-sided '
 alias scrot="scrot '%Y-%m-%d_\$wx\$h.png' -e 'mv \$f ~/usr/images/screenshots/'"
 alias ll='ls -la'
-alias steam='wine .wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe'
+alias steam='wine '$HOME'.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe'
 alias micrecord='ffmpeg -f alsa -i hw:0'
+alias starti3='cat '$HOME'/etc/xinit/i3 > '$HOME'/.xinitrc && startx'
+alias startswm='cat '$HOME'/etc/xinit/swm > '$HOME'/.xinitrc && startx'
 
